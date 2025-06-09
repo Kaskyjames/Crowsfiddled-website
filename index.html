@@ -5,6 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Crowsfiddled Company Limited</title>
     <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Smooth scroll behavior -->
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+    </style>
+
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
   </head>
   <body class="bg-white text-gray-800">
 
@@ -22,7 +32,7 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="min-h-screen flex items-center justify-center bg-blue-50 pt-24 px-6 text-center">
+    <section class="min-h-screen flex items-center justify-center bg-blue-50 pt-24 px-6 text-center" data-aos="fade-up">
       <div class="max-w-2xl">
         <h2 class="text-4xl md:text-5xl font-bold text-blue-900 mb-4">
           Building Nigeria’s Future
@@ -42,125 +52,127 @@
     </section>
 
     <!-- About Us Section -->
-<section id="about" class="bg-white py-20 px-6">
-  <div class="max-w-4xl mx-auto text-center">
-    <h3 class="text-3xl font-bold text-blue-900 mb-4">About Us</h3>
-    <p class="text-gray-700 text-lg mb-6">
-      Crowsfiddled Company Limited is a Nigerian-based civil engineering and real estate company founded in 2015. 
-      With a highly trained team and a commitment to reliability, we provide construction, inspection, and project management 
-      services across multiple states.
-    </p>
-    <p class="text-gray-600">
-      Our presence has expanded across Jos, Enugu, Anambra, Asaba, Owerri, and Abia State — delivering results 
-      that meet engineering standards and exceed client expectations. From soil testing to structural design, 
-      we bring expertise and passion to every project.
-    </p>
-  </div>
-</section> 
+    <section id="about" class="bg-white py-20 px-6" data-aos="fade-up">
+      <div class="max-w-4xl mx-auto text-center">
+        <h3 class="text-3xl font-bold text-blue-900 mb-4">About Us</h3>
+        <p class="text-gray-700 text-lg mb-6">
+          Crowsfiddled Company Limited is a Nigerian-based civil engineering and real estate company founded in 2015. 
+          With a highly trained team and a commitment to reliability, we provide construction, inspection, and project management 
+          services across multiple states.
+        </p>
+        <p class="text-gray-600">
+          Our presence has expanded across Jos, Enugu, Anambra, Asaba, Owerri, and Abia State — delivering results 
+          that meet engineering standards and exceed client expectations. From soil testing to structural design, 
+          we bring expertise and passion to every project.
+        </p>
+      </div>
+    </section>
 
     <!-- Services Section -->
-<section id="services" class="bg-gray-50 py-20 px-6">
-  <div class="max-w-6xl mx-auto text-center">
-    <h3 class="text-3xl font-bold text-blue-900 mb-4">Our Services</h3>
-    <p class="text-gray-700 text-lg mb-10">
-      Crowsfiddled Company delivers top-quality solutions across engineering, construction, and real estate industries.
-    </p>
-    <div class="grid gap-8 md:grid-cols-3 text-left">
-      <!-- Service 1 -->
-      <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
-        <h4 class="text-xl font-semibold text-blue-800 mb-2">Civil Engineering</h4>
-        <p class="text-gray-600">
-          Site inspection, soil testing, load calculations, and structural design led by certified engineers using top-tier tools.
+    <section id="services" class="bg-gray-50 py-20 px-6" data-aos="fade-up">
+      <div class="max-w-6xl mx-auto text-center">
+        <h3 class="text-3xl font-bold text-blue-900 mb-4">Our Services</h3>
+        <p class="text-gray-700 text-lg mb-10">
+          Crowsfiddled Company delivers top-quality solutions across engineering, construction, and real estate industries.
         </p>
+        <div class="grid gap-8 md:grid-cols-3 text-left">
+          <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
+            <h4 class="text-xl font-semibold text-blue-800 mb-2">Civil Engineering</h4>
+            <p class="text-gray-600">
+              Site inspection, soil testing, load calculations, and structural design led by certified engineers using top-tier tools.
+            </p>
+          </div>
+          <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
+            <h4 class="text-xl font-semibold text-blue-800 mb-2">Real Estate Development</h4>
+            <p class="text-gray-600">
+              End-to-end real estate services — property development, management, and investor partnerships tailored for long-term success.
+            </p>
+          </div>
+          <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
+            <h4 class="text-xl font-semibold text-blue-800 mb-2">General Supply & Contracting</h4>
+            <p class="text-gray-600">
+              We handle procurement and supply of goods and equipment for public and private sector projects across Nigeria.
+            </p>
+          </div>
+        </div>
       </div>
-      <!-- Service 2 -->
-      <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
-        <h4 class="text-xl font-semibold text-blue-800 mb-2">Real Estate Development</h4>
-        <p class="text-gray-600">
-          End-to-end real estate services — property development, management, and investor partnerships tailored for long-term success.
-        </p>
-      </div>
-      <!-- Service 3 -->
-      <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
-        <h4 class="text-xl font-semibold text-blue-800 mb-2">General Supply & Contracting</h4>
-        <p class="text-gray-600">
-          We handle procurement and supply of goods and equipment for public and private sector projects across Nigeria.
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
-    
+    </section>
+
     <!-- Projects Section -->
-<section id="projects" class="bg-white py-20 px-6">
-  <div class="max-w-6xl mx-auto text-center">
-    <h3 class="text-3xl font-bold text-blue-900 mb-4">Our Projects</h3>
-    <p class="text-gray-700 text-lg mb-10">
-      A few highlights of the impactful civil and real estate projects we’ve executed across various Nigerian cities.
-    </p>
-
-    <div class="grid gap-8 md:grid-cols-3 text-left">
-      <!-- Project 1 -->
-      <div class="bg-gray-50 p-6 rounded-lg shadow hover:shadow-lg transition">
-        <h4 class="text-xl font-semibold text-blue-800 mb-2">Residential Development – Owerri</h4>
-        <p class="text-gray-600">
-          A modern housing estate with structural designs and supervision carried out by our engineering team.
+    <section id="projects" class="bg-white py-20 px-6" data-aos="fade-up">
+      <div class="max-w-6xl mx-auto text-center">
+        <h3 class="text-3xl font-bold text-blue-900 mb-4">Our Projects</h3>
+        <p class="text-gray-700 text-lg mb-10">
+          A few highlights of the impactful civil and real estate projects we’ve executed across various Nigerian cities.
         </p>
+
+        <div class="grid gap-8 md:grid-cols-3 text-left">
+          <div class="bg-gray-50 p-6 rounded-lg shadow hover:shadow-lg transition">
+            <h4 class="text-xl font-semibold text-blue-800 mb-2">Residential Development – Owerri</h4>
+            <p class="text-gray-600">
+              A modern housing estate with structural designs and supervision carried out by our engineering team.
+            </p>
+          </div>
+          <div class="bg-gray-50 p-6 rounded-lg shadow hover:shadow-lg transition">
+            <h4 class="text-xl font-semibold text-blue-800 mb-2">Commercial Complex – Asaba</h4>
+            <p class="text-gray-600">
+              Delivered a full commercial building including load testing, site preparation, and general supply.
+            </p>
+          </div>
+          <div class="bg-gray-50 p-6 rounded-lg shadow hover:shadow-lg transition">
+            <h4 class="text-xl font-semibold text-blue-800 mb-2">Site Survey & Soil Analysis – Enugu</h4>
+            <p class="text-gray-600">
+              Engineering-led soil testing and survey for a proposed industrial park site.
+            </p>
+          </div>
+        </div>
       </div>
-      <!-- Project 2 -->
-      <div class="bg-gray-50 p-6 rounded-lg shadow hover:shadow-lg transition">
-        <h4 class="text-xl font-semibold text-blue-800 mb-2">Commercial Complex – Asaba</h4>
-        <p class="text-gray-600">
-          Delivered a full commercial building including load testing, site preparation, and general supply.
+    </section>
+
+    <!-- Investor CTA -->
+    <section id="partner" class="bg-blue-900 text-white py-20 px-6" data-aos="fade-up">
+      <div class="max-w-4xl mx-auto text-center">
+        <h3 class="text-3xl font-bold mb-4">Partner With Us</h3>
+        <p class="text-lg mb-6">
+          Crowsfiddled Company is open to partnerships and investment opportunities from individuals ready to build a strong future in real estate and civil construction.
         </p>
-      </div>
-      <!-- Project 3 -->
-      <div class="bg-gray-50 p-6 rounded-lg shadow hover:shadow-lg transition">
-        <h4 class="text-xl font-semibold text-blue-800 mb-2">Site Survey & Soil Analysis – Enugu</h4>
-        <p class="text-gray-600">
-          Engineering-led soil testing and survey for a proposed industrial park site.
+        <p class="text-xl font-semibold mb-8">
+          Minimum investment: ₦10,000,000
         </p>
+        <a href="#contact" class="inline-block bg-white text-blue-900 font-semibold px-6 py-3 rounded shadow hover:bg-gray-100 transition">
+          Get in Touch
+        </a>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-    <!-- Investor Call to Action -->
-<section id="invest" class="bg-blue-900 text-white py-20 px-6">
-  <div class="max-w-4xl mx-auto text-center">
-    <h3 class="text-3xl font-bold mb-4">Partner With Us</h3>
-    <p class="text-lg mb-6">
-      Crowsfiddled Company is open to partnerships and investment opportunities from individuals ready to build a strong future in real estate and civil construction.
-    </p>
-    <p class="text-xl font-semibold mb-8">
-      Minimum investment: ₦10,000,000
-    </p>
-    <a href="#contact" class="inline-block bg-white text-blue-900 font-semibold px-6 py-3 rounded shadow hover:bg-gray-100 transition">
-      Get in Touch
-    </a>
-  </div>
-</section>
+    <!-- Contact -->
+    <section id="contact" class="bg-gray-100 py-20 px-6" data-aos="fade-up">
+      <div class="max-w-4xl mx-auto text-center">
+        <h3 class="text-3xl font-bold text-blue-900 mb-4">Contact Us</h3>
+        <p class="text-gray-700 text-lg mb-6">
+          Ready to invest, collaborate, or request a project quote? We’re just a message away.
+        </p>
+        <div class="text-left mt-8 space-y-4">
+          <p><strong>Email:</strong> fiddledcfc@gmail.com</p>
+          <p><strong>Phone:</strong> +234-813 292 6642</p>
+          <p><strong>WhatsApp:</strong> +234-813 292 6642</p> 
+          <p><strong>Head Office:</strong> Abuja, Nigeria</p>
+        </div>
+      </div>
+    </section>
 
-    <!-- Contact Section -->
-<section id="contact" class="bg-gray-100 py-20 px-6">
-  <div class="max-w-4xl mx-auto text-center">
-    <h3 class="text-3xl font-bold text-blue-900 mb-4">Contact Us</h3>
-    <p class="text-gray-700 text-lg mb-6">
-      Ready to invest, collaborate, or request a project quote? We’re just a message away.
-    </p>
-    <div class="text-left mt-8 space-y-4">
-      <p><strong>Email:</strong> fiddledcfc@gmail.com</p>
-      <p><strong>Phone:</strong> +234-813 292 6642</p>
-      <p><strong>WhatsApp:</strong> +234-813 292 6642</p> 
-      <p><strong>Head Office:</strong> Abuja, Nigeria</p>
-    </div>
-  </div>
-</section>
+    <!-- Footer -->
+    <footer class="bg-blue-900 text-white text-center py-6">
+      <p class="text-sm">&copy; 2025 Crowsfiddled Company Limited. All rights reserved.</p>
+    </footer>
 
-<!-- Footer -->
-<footer class="bg-blue-900 text-white text-center py-6">
-  <p class="text-sm">&copy; 2025 Crowsfiddled Company Limited. All rights reserved.</p>
-</footer>
-    
+    <!-- AOS Script -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 1000,
+        once: true
+      });
+    </script>
   </body>
 </html>
