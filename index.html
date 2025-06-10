@@ -1,145 +1,189 @@
-<!DOCTYPE html><html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Crowsfiddled Company Limited</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
-    <style>
-      html {
-        scroll-behavior: smooth;
-      }
-      .floating-whatsapp {
-        position: fixed;
-        bottom: 20px;
-        right: 20px;
-        z-index: 9999;
-      }
-    </style>
-  </head>
-  <body class="bg-white text-gray-800">
-    <!-- Header -->
-    <header class="bg-white shadow-md fixed top-0 left-0 right-0 z-50">
-      <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
-        <div class="flex items-center space-x-3">
-          <img src="logo.png" alt="Crowsfiddled Logo" class="w-10 h-10 object-contain" />
-          <h1 class="text-2xl font-bold text-blue-800">Crowsfiddled Co. Ltd</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Crowsfiddled Company Limited</title>
+  <meta name="description" content="Crowsfiddled Company Limited is an innovative investment and project development company offering cutting-edge solutions in real estate, tech, trading, and consulting.">
+  <meta name="keywords" content="Crowsfiddled, Investment, Real Estate, AI Trading, Consulting, Company Limited">
+  <meta name="author" content="Crowsfiddled Company Limited">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+    }
+    .video-bg {
+      position: relative;
+      height: 90vh;
+      overflow: hidden;
+    }
+    .video-bg video {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      min-width: 100%;
+      min-height: 100%;
+      transform: translate(-50%, -50%);
+      object-fit: cover;
+      z-index: -1;
+    }
+    .hero-content {
+      position: relative;
+      height: 90vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.8);
+      text-align: center;
+      padding: 20px;
+    }
+    section {
+      padding: 60px 20px;
+    }
+    .testimonial-card {
+      background: #f8f9fa;
+      border-left: 4px solid #0d6efd;
+      padding: 20px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+    }
+    footer {
+      background: #212529;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 999;
+    }
+    .whatsapp-float img {
+      width: 60px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Hero Video -->
+  <div class="video-bg">
+    <video autoplay muted loop>
+      <source src="video.mp4" type="video/mp4" />
+    </video>
+    <div class="hero-content">
+      <div data-aos="zoom-in">
+        <h1>Crowsfiddled Company Limited</h1>
+        <p>Building Dreams with Strategy, Vision, and Technology</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- About Section -->
+  <section id="about" class="container text-center" data-aos="fade-up">
+    <h2>About Us</h2>
+    <p>We are a strategic investment and development company focused on shaping the future through sustainable ventures in real estate, trading, tech innovation, and consulting.</p>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="bg-light text-center" data-aos="fade-up">
+    <div class="container">
+      <h2>Our Services</h2>
+      <div class="row">
+        <div class="col-md-4">
+          <h4>Real Estate</h4>
+          <p>Development, brokerage, and investment in high-value properties.</p>
         </div>
-        <nav class="space-x-4 text-sm font-medium text-gray-600 hidden sm:block">
-          <a href="#about" class="hover:text-blue-700">About</a>
-          <a href="#services" class="hover:text-blue-700">Services</a>
-          <a href="#projects" class="hover:text-blue-700">Projects</a>
-          <a href="#team" class="hover:text-blue-700">Team</a>
-          <a href="#testimonials" class="hover:text-blue-700">Testimonials</a>
-          <a href="#contact" class="hover:text-blue-700">Contact</a>
-        </nav>
-      </div>
-    </header><!-- Hero Section with Video Background -->
-<section class="relative min-h-screen flex items-center justify-center pt-24 px-6 text-center overflow-hidden" data-aos="fade-up">
-  <video autoplay muted loop playsinline class="absolute top-0 left-0 w-full h-full object-cover z-0">
-    <source src="hero.mp4" type="video/mp4" />
-    Your browser does not support the video tag.
-  </video>
-  <div class="absolute inset-0 bg-blue-900 bg-opacity-60 z-10"></div>
-  <div class="relative z-20 max-w-2xl text-white">
-    <h2 class="text-4xl md:text-5xl font-bold mb-4">Building Nigeria’s Future</h2>
-    <p class="text-lg md:text-xl mb-6">Reliable Engineering & Real Estate Management You Can Trust.</p>
-    <div class="space-x-4">
-      <a href="#partner" class="bg-white text-blue-900 px-6 py-3 rounded-lg shadow hover:bg-gray-100 transition font-semibold">Partner With Us</a>
-      <a href="#projects" class="text-white font-semibold hover:underline">View Projects</a>
-    </div>
-  </div>
-</section>
-
-<!-- About Section -->
-<section id="about" class="bg-white py-20 px-6" data-aos="fade-up">
-  <div class="max-w-4xl mx-auto text-center">
-    <h3 class="text-3xl font-bold text-blue-900 mb-4">About Us</h3>
-    <p class="text-gray-700 text-lg mb-6">Crowsfiddled Company Limited is a Nigerian-based civil engineering and real estate company founded in 2015.</p>
-    <p class="text-gray-600">We operate in Jos, Abuja, Enugu, Anambra, Asaba, Owerri, Lagos, and Abia delivering exceptional engineering results.</p>
-  </div>
-</section>
-
-<!-- Services Section -->
-<section id="services" class="bg-gray-50 py-20 px-6" data-aos="fade-up">
-  <div class="max-w-6xl mx-auto text-center">
-    <h3 class="text-3xl font-bold text-blue-900 mb-10">Our Services</h3>
-    <div class="grid gap-8 md:grid-cols-3 text-left">
-      <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
-        <video src="civil.mp4" autoplay muted loop class="w-full h-40 object-cover rounded mb-4"></video>
-        <h4 class="text-xl font-semibold text-blue-800 mb-2">Civil Engineering</h4>
-        <p class="text-gray-600">Site inspection, soil testing, load calculations, and structural design led by certified engineers using top-tier tools.</p>
-      </div>
-      <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
-        <video src="realestate.mp4" autoplay muted loop class="w-full h-40 object-cover rounded mb-4"></video>
-        <h4 class="text-xl font-semibold text-blue-800 mb-2">Real Estate Development</h4>
-        <p class="text-gray-600">End-to-end real estate services — property development, management, and investor partnerships tailored for long-term success.</p>
-      </div>
-      <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
-        <video src="supply.mp4" autoplay muted loop class="w-full h-40 object-cover rounded mb-4"></video>
-        <h4 class="text-xl font-semibold text-blue-800 mb-2">General Supply & Contracting</h4>
-        <p class="text-gray-600">We handle procurement and supply of goods and equipment for public and private sector projects across Nigeria.</p>
+        <div class="col-md-4">
+          <h4>AI Trading</h4>
+          <p>Automated trading strategies across Forex, Crypto, and Stock markets.</p>
+        </div>
+        <div class="col-md-4">
+          <h4>Business Consulting</h4>
+          <p>Expert advisory for businesses seeking digital, operational, or investment growth.</p>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- Projects Section -->
-<section id="projects" class="bg-white py-20 px-6" data-aos="fade-up">
-  <div class="max-w-6xl mx-auto text-center">
-    <h3 class="text-3xl font-bold text-blue-900 mb-4">Our Projects</h3>
-    <div class="grid gap-8 md:grid-cols-3 text-left">
-      <div class="bg-gray-50 p-6 rounded-lg shadow hover:shadow-lg">
-        <h4 class="text-xl font-semibold text-blue-800 mb-2">Residential - Owerri</h4>
-        <p class="text-gray-600">Estate development with complete structural design and supervision.</p>
-      </div>
-      <div class="bg-gray-50 p-6 rounded-lg shadow hover:shadow-lg">
-        <h4 class="text-xl font-semibold text-blue-800 mb-2">Complex - Asaba</h4>
-        <p class="text-gray-600">Commercial complex including testing, design, and delivery.</p>
-      </div>
-      <div class="bg-gray-50 p-6 rounded-lg shadow hover:shadow-lg">
-        <h4 class="text-xl font-semibold text-blue-800 mb-2">Soil Analysis - Enugu</h4>
-        <p class="text-gray-600">Engineering-led soil survey for an industrial park.</p>
-      </div>
-    </div>
-  </div>
-</section>
+  <!-- Projects Section -->
+  <section id="projects" class="container text-center" data-aos="fade-up">
+    <h2>Projects</h2>
+    <p>Our portfolio includes smart homes, AI tools, startup incubation, and multi-sector innovations.</p>
+  </section>
 
-<!-- Team Section -->
-<section id="team" class="bg-blue-50 py-20 px-6" data-aos="fade-up">
-  <div class="max-w-5xl mx-auto text-center">
-    <h3 class="text-3xl font-bold text-blue-900 mb-10">Meet Our Team</h3>
-    <div class="grid gap-8 md:grid-cols-3">
-      <div class="bg-white p-6 rounded-lg shadow">
-        <h4 class="text-xl font-semibold text-blue-800">Engr. Ekwebelem Vitalis</h4>
-        <p class="text-gray-600">CEO & Lead Engineer</p>
+  <!-- Testimonials Section -->
+  <section id="testimonials" class="bg-light" data-aos="fade-up">
+    <div class="container">
+      <h2 class="text-center mb-4">What Our Clients Say</h2>
+      <div class="testimonial-card">
+        <p>“Crowsfiddled helped us scale our real estate investments effortlessly. Their professionalism is unmatched.”</p>
+        <small>- Grace M., Lagos</small>
       </div>
-      <div class="bg-white p-6 rounded-lg shadow">
-        <h4 class="text-xl font-semibold text-blue-800">Mrs. Halima Chidawa</h4>
-        <p class="text-gray-600">Director, Real Estate</p>
+      <div class="testimonial-card">
+        <p>“I doubled my portfolio using their AI-powered trading system. Absolute game-changer!”</p>
+        <small>- David A., London</small>
       </div>
-      <div class="bg-white p-6 rounded-lg shadow">
-        <h4 class="text-xl font-semibold text-blue-800">Mr. Chima Joel</h4>
-        <p class="text-gray-600">Operations Manager</p>
+      <div class="testimonial-card">
+        <p>“Their consulting arm gave us insights we couldn’t find anywhere else. We’re now more profitable than ever.”</p>
+        <small>- Tech Startup CEO</small>
       </div>
     </div>
+  </section>
+
+  <!-- Contact / Investment Section -->
+  <section id="contact" data-aos="fade-up">
+    <div class="container text-center">
+      <h2>Partner with Us</h2>
+      <p>Interested in investing, collaborating, or requesting our services? Let’s connect.</p>
+      <p><strong>Email:</strong> contact@crowsfiddled.com</p>
+      <p><strong>Phone/WhatsApp:</strong> +234 123 456 7890</p>
+      <a href="https://wa.me/2341234567890" target="_blank" class="btn btn-primary">Chat on WhatsApp</a>
+    </div>
+  </section>
+
+  <!-- Blog Section -->
+  <section id="blog" class="bg-light" data-aos="fade-up">
+    <div class="container text-center">
+      <h2>Latest Insights</h2>
+      <p>Stay updated with business, tech, and market trends from our team.</p>
+      <div class="row">
+        <div class="col-md-4">
+          <h5>The Future of AI Trading</h5>
+          <p>A glimpse into how artificial intelligence is transforming investment strategies.</p>
+        </div>
+        <div class="col-md-4">
+          <h5>Smart Real Estate: Next Wave</h5>
+          <p>What smart homes, IoT, and green buildings mean for the future of living.</p>
+        </div>
+        <div class="col-md-4">
+          <h5>Why Vision Drives Value</h5>
+          <p>Understanding the role of foresight and clarity in profitable ventures.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Crowsfiddled Company Limited. All Rights Reserved.</p>
+  </footer>
+
+  <!-- WhatsApp Floating Button -->
+  <div class="whatsapp-float">
+    <a href="https://wa.me/2341234567890" target="_blank">
+      <img src="https://img.icons8.com/color/48/000000/whatsapp.png" alt="WhatsApp" />
+    </a>
   </div>
-</section>
 
-<!-- Partner CTA -->
-<!-- (Already present and correctly placed in original code) -->
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 
-<!-- Testimonials Section (Only one section retained) -->
-<!-- (Already present and complete in original code) -->
-
-<!-- Floating WhatsApp Button -->
-<a href="https://wa.me/2348012345678" class="floating-whatsapp">
-  <img src="whatsapp.png" alt="Chat on WhatsApp" class="w-12 h-12" />
-</a>
-
-<!-- AOS Script -->
-<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-<script>AOS.init();</script>
-
-  </body>
+</body>
 </html>
