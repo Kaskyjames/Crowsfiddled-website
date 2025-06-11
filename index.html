@@ -366,12 +366,37 @@
   </div>
 </section>
 
+ <!-- Floating WhatsApp Button -->
+<a href="https://wa.me/2348132926642" target="_blank" class="fixed bottom-5 right-5 z-50">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="Chat on WhatsApp"
+    class="w-12 h-12 drop-shadow-lg hover:scale-105 transition" />
+</a>
     
 <!-- Footer -->
-<footer class="bg-blue-900 text-white py-8 text-center mt-10">
-  <div class="max-w-6xl mx-auto px-6">
-    <p class="text-lg">&copy; <span id="year"></span> Crowsfiddled Company Limited. All rights reserved.</p>
-    <p class="text-sm mt-2">Empowering systems. Building futures.</p>
+<footer class="bg-blue-900 text-white py-10 mt-20">
+  <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-3 gap-8">
+    <div>
+      <h4 class="text-xl font-bold mb-3">Crowsfiddled Co. Ltd</h4>
+      <p class="text-sm">Innovating the future through smart investments, impactful projects, and visionary partnerships.</p>
+    </div>
+    <div>
+      <h4 class="text-lg font-semibold mb-2">Quick Links</h4>
+      <ul class="space-y-1 text-sm">
+        <li><a href="#about" class="hover:text-yellow-300">About</a></li>
+        <li><a href="#services" class="hover:text-yellow-300">Services</a></li>
+        <li><a href="#projects" class="hover:text-yellow-300">Projects</a></li>
+        <li><a href="#contact" class="hover:text-yellow-300">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4 class="text-lg font-semibold mb-2">Contact</h4>
+      <p class="text-sm">Email: fiddledcfc@gmail.com</p>
+      <p class="text-sm">Phone: +234 813 292 6642</p>
+      <p class="text-sm">Enugu, Nigeria</p>
+    </div>
+  </div>
+  <div class="text-center text-sm text-gray-200 mt-10">
+    &copy; 2025 Crowsfiddled Company Ltd. All rights reserved.
   </div>
 </footer>
 
@@ -386,57 +411,33 @@
   AOS.init({ duration: 1000, once: true });
 </script>
 
- <!-- WhatsApp Floating Button -->
-<a
-  href="https://wa.me/2348137392196"
-  class="whatsapp-float"
-  target="_blank"
-  title="Chat with us on WhatsApp"
->
-  <img
-    src="https://cdn-icons-png.flaticon.com/512/733/733585.png"
-    alt="WhatsApp"
-    style="height: 50px; width: 50px;"
-  />
-</a>
-
-<style>
-  .whatsapp-float {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    z-index: 1000;
-    background-color: #25d366;
-    border-radius: 50%;
-    padding: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease;
-  }
-
-  .whatsapp-float:hover {
-    transform: scale(1.1);
-  }
-</style>
->
-  <!-- WhatsApp SVG Icon -->
-  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="white" viewBox="0 0 24 24">
-    <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.435 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.435-9.889 9.885-.001 2.225.651 3.891 1.746 5.634l-1.051 3.847 3.794-1.181zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.03-.967-.272-.099-.47-.149-.669.15-.198.297-.767.967-.94 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.5-.669-.51-.173-.007-.372-.009-.571-.009-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.077 4.487.709.306 1.263.489 1.694.626.712.227 1.36.195 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.413z"/>
-  </svg>
-
-  
-</a>
-
-    <script>
-  const observer = new IntersectionObserver((entries) => {
+<script>
+  // Reveal elements on scroll
+  const revealElements = document.querySelectorAll(".reveal");
+  const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
-        entry.target.classList.add('reveal-visible');
+        entry.target.classList.add("animate-fade-in-up");
+        observer.unobserve(entry.target);
       }
     });
-  });
+  }, { threshold: 0.1 });
 
-  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-    </script>
+  revealElements.forEach(el => observer.observe(el));
+</script>
+
+<style>
+  .animate-fade-in-up {
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 0.7s ease-out;
+  }
+
+  .reveal {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+</style>
     
   </body>
 </html>
