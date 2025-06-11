@@ -471,6 +471,18 @@
 >
 
     <script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('reveal-visible');
+      }
+    });
+  });
+
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+
+<script>
   // Reveal elements on scroll
   const revealElements = document.querySelectorAll(".reveal");
   const observer = new IntersectionObserver(entries => {
