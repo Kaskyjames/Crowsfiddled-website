@@ -29,12 +29,26 @@
     <h2 class="text-3xl font-bold text-blue-900 mb-6 text-center">Crowsfiddled Blog</h2>
 
     <div class="grid md:grid-cols-2 gap-8">
-      <!-- Blog Post 1 -->
-      <article class="bg-white rounded-lg shadow p-6">
-        <h3 class="text-2xl font-semibold text-blue-800 mb-2">How We Structure Smart Investments</h3>
-        <p class="text-sm text-gray-500 mb-4">Posted June 9, 2025</p>
-        <p class="text-gray-700">At Crowsfiddled, we design investment plans that prioritize capital safety, ROI visibility, and strategic project alignment. From contractual agreements to detailed reporting, here’s how we operate...</p>
-      </article>
+      <!-- Blog Card with Modal Trigger -->
+<div class="bg-white p-6 rounded-lg shadow-md">
+  <h3 class="text-xl font-semibold text-blue-800">Why We Do What We Do</h3>
+  <p class="text-gray-600 my-3">Understanding our core motivation...</p>
+  <button onclick="openModal('modal1')" class="text-blue-600 hover:underline">Read More</button>
+</div>
+
+<!-- Modal -->
+<div id="modal1" class="fixed inset-0 bg-black bg-opacity-60 z-50 flex items-center justify-center hidden">
+  <div class="bg-white p-6 rounded-lg max-w-2xl w-full relative">
+    <button onclick="closeModal('modal1')" class="absolute top-2 right-2 text-gray-500 hover:text-black text-2xl">&times;</button>
+    <h2 class="text-2xl font-bold text-blue-800 mb-4">Why We Do What We Do</h2>
+    <p class="text-gray-700 leading-relaxed">
+      At Crowsfiddled, our mission is deeper than just development or design...
+      <br /><br />
+      We believe in building sustainable communities through smart investment and creative engineering.
+      Every project is a step toward transformation — not just for clients, but for the future.
+    </p>
+  </div>
+</div>
 
       <!-- Blog Post 2 -->
       <article class="bg-white rounded-lg shadow p-6">
