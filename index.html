@@ -482,33 +482,6 @@
   document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
     </script>
 
-<script>
-  // Reveal elements on scroll
-  const revealElements = document.querySelectorAll(".reveal");
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("animate-fade-in-up");
-        observer.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.1 });
 
-  revealElements.forEach(el => observer.observe(el));
-</script>
-
-<style>
-  .animate-fade-in-up {
-    opacity: 1;
-    transform: translateY(0);
-    transition: all 0.7s ease-out;
-  }
-
-  .reveal {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-</style>
-    
   </body>
     </html>
