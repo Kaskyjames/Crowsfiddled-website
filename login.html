@@ -5,30 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Client Login - Crowsfiddled</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-  <style>
-    .bg-video {
-      position: fixed;
-      top: 0; left: 0;
-      width: 100vw;
-      height: 100vh;
-      object-fit: cover;
-      z-index: -1;
-    }
-  </style>
 </head>
-<body class="min-h-screen flex items-center justify-center font-sans relative overflow-hidden">
+<body class="bg-gradient-to-r from-blue-100 via-white to-blue-100 min-h-screen flex items-center justify-center font-sans">
 
-  <!-- Background Video -->
-  <video autoplay muted loop class="bg-video">
-    <source src="login-video.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
-
-  <!-- Login Card -->
-  <div class="w-full max-w-md bg-white bg-opacity-90 p-8 rounded-2xl shadow-2xl border border-blue-100 animate-fade-in z-10">
+  <div class="w-full max-w-md bg-white p-8 rounded-2xl shadow-2xl border border-blue-100 animate-fade-in">
     <div class="text-center mb-6">
       <h1 class="text-3xl font-extrabold text-blue-800">Crowsfiddled Portal</h1>
-      <p class="text-gray-600 mt-2">Client Secure Login</p>
+      <p class="text-gray-500 mt-2">Client Secure Login</p>
     </div>
 
     <form onsubmit="handleLogin(event)">
