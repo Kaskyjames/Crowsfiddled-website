@@ -139,6 +139,40 @@
     <p class="text-xs text-gray-400 mt-4">We respect your privacy. Unsubscribe anytime.</p>
   </div>
 </footer>
+
+<!-- Chart.js CDN -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script>
+  const ctx = document.getElementById('investmentChart').getContext('2d');
+  new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: ['Enugu Multi-Unit', 'Awka Urban', 'Lagos Smart'],
+      datasets: [{
+        label: 'Amount Invested (₦)',
+        data: [3500000, 2000000, 1000000],
+        backgroundColor: ['#3B82F6', '#F59E0B', '#EF4444'],
+        borderRadius: 6
+      }]
+    },
+    options: {
+      scales: {
+        y: {
+          beginAtZero: true,
+          ticks: {
+            callback: value => '₦' + value.toLocaleString()
+          }
+        }
+      },
+      plugins: {
+        legend: {
+          display: false
+        }
+      }
+    }
+  });
+</script>
   
 </body>
 </html>
