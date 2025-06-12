@@ -6,56 +6,35 @@
   <title>Client Dashboard - Crowsfiddled</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
-<body class="bg-gray-100 min-h-screen">
+<body class="bg-gray-100 min-h-screen font-sans">
+  <div class="max-w-6xl mx-auto p-6">
+    <!-- Header -->
+    <header class="flex justify-between items-center mb-6">
+      <h1 class="text-2xl font-bold text-blue-800">Client Dashboard</h1>
+      <a href="index.html" class="text-sm text-blue-600 hover:underline">← Back to Home</a>
+    </header>
 
-  <!-- Top Bar -->
-  <header class="bg-blue-800 text-white p-4 shadow">
-    <div class="max-w-6xl mx-auto flex justify-between items-center">
-      <h1 class="text-xl font-bold">Crowsfiddled Client Dashboard</h1>
-      <button onclick="logout()" class="bg-red-500 px-4 py-1 rounded hover:bg-red-600">Logout</button>
+    <!-- Welcome Message -->
+    <div class="bg-white rounded-lg shadow p-6 mb-6">
+      <h2 class="text-xl font-semibold text-gray-800">Welcome, valued client!</h2>
+      <p class="text-gray-600 mt-2">Here’s a summary of your trading and investment activities.</p>
     </div>
-  </header>
 
-  <!-- Main Content -->
-  <main class="p-6 max-w-6xl mx-auto">
-    <h2 class="text-2xl font-semibold text-gray-800 mb-4">Welcome, Valued Client 👋</h2>
-
-    <div class="grid gap-6 md:grid-cols-2">
-      <!-- Project Update Card -->
-      <div class="bg-white p-6 rounded shadow">
-        <h3 class="text-lg font-semibold text-blue-700">🏗️ Project Updates</h3>
-        <p class="text-gray-600 mt-2">View progress on your current real estate investments and developments.</p>
-        <a href="#" class="text-blue-600 hover:underline mt-2 inline-block">View Timeline</a>
+    <!-- Stats Cards -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="bg-blue-100 p-4 rounded shadow">
+        <h3 class="text-lg font-bold text-blue-700">Active Accounts</h3>
+        <p class="text-2xl mt-2">3</p>
       </div>
-
-      <!-- Investment Documents Card -->
-      <div class="bg-white p-6 rounded shadow">
-        <h3 class="text-lg font-semibold text-blue-700">📄 Investment Documents</h3>
-        <p class="text-gray-600 mt-2">Access signed agreements, invoices, and performance reports.</p>
-        <a href="#" class="text-blue-600 hover:underline mt-2 inline-block">Download Files</a>
+      <div class="bg-green-100 p-4 rounded shadow">
+        <h3 class="text-lg font-bold text-green-700">Total Investments</h3>
+        <p class="text-2xl mt-2">₦2.5M</p>
       </div>
-
-      <!-- Contact Support -->
-      <div class="bg-white p-6 rounded shadow">
-        <h3 class="text-lg font-semibold text-blue-700">💬 Talk to Your Manager</h3>
-        <p class="text-gray-600 mt-2">Got questions or need updates? Reach out directly.</p>
-        <a href="https://wa.me/234XXXXXXXXXX" target="_blank" class="text-green-600 hover:underline mt-2 inline-block">Chat on WhatsApp</a>
-      </div>
-
-      <!-- Upcoming Events -->
-      <div class="bg-white p-6 rounded shadow">
-        <h3 class="text-lg font-semibold text-blue-700">📅 Upcoming Events</h3>
-        <p class="text-gray-600 mt-2">Stay informed about project launches, client meetings, and investor tours.</p>
-        <a href="#" class="text-blue-600 hover:underline mt-2 inline-block">View Calendar</a>
+      <div class="bg-yellow-100 p-4 rounded shadow">
+        <h3 class="text-lg font-bold text-yellow-700">Ongoing Trades</h3>
+        <p class="text-2xl mt-2">7</p>
       </div>
     </div>
-  </main>
-
-  <script>
-    function logout() {
-      window.location.href = "login.html";
-    }
-  </script>
-
+  </div>
 </body>
 </html>
