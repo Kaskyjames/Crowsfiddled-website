@@ -1,1 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Client Dashboard - Crowsfiddled</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 min-h-screen">
 
+  <!-- Top Bar -->
+  <header class="bg-blue-800 text-white p-4 shadow">
+    <div class="max-w-6xl mx-auto flex justify-between items-center">
+      <h1 class="text-xl font-bold">Crowsfiddled Client Dashboard</h1>
+      <button onclick="logout()" class="bg-red-500 px-4 py-1 rounded hover:bg-red-600">Logout</button>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="p-6 max-w-6xl mx-auto">
+    <h2 class="text-2xl font-semibold text-gray-800 mb-4">Welcome, Valued Client 👋</h2>
+
+    <div class="grid gap-6 md:grid-cols-2">
+      <!-- Project Update Card -->
+      <div class="bg-white p-6 rounded shadow">
+        <h3 class="text-lg font-semibold text-blue-700">🏗️ Project Updates</h3>
+        <p class="text-gray-600 mt-2">View progress on your current real estate investments and developments.</p>
+        <a href="#" class="text-blue-600 hover:underline mt-2 inline-block">View Timeline</a>
+      </div>
+
+      <!-- Investment Documents Card -->
+      <div class="bg-white p-6 rounded shadow">
+        <h3 class="text-lg font-semibold text-blue-700">📄 Investment Documents</h3>
+        <p class="text-gray-600 mt-2">Access signed agreements, invoices, and performance reports.</p>
+        <a href="#" class="text-blue-600 hover:underline mt-2 inline-block">Download Files</a>
+      </div>
+
+      <!-- Contact Support -->
+      <div class="bg-white p-6 rounded shadow">
+        <h3 class="text-lg font-semibold text-blue-700">💬 Talk to Your Manager</h3>
+        <p class="text-gray-600 mt-2">Got questions or need updates? Reach out directly.</p>
+        <a href="https://wa.me/234XXXXXXXXXX" target="_blank" class="text-green-600 hover:underline mt-2 inline-block">Chat on WhatsApp</a>
+      </div>
+
+      <!-- Upcoming Events -->
+      <div class="bg-white p-6 rounded shadow">
+        <h3 class="text-lg font-semibold text-blue-700">📅 Upcoming Events</h3>
+        <p class="text-gray-600 mt-2">Stay informed about project launches, client meetings, and investor tours.</p>
+        <a href="#" class="text-blue-600 hover:underline mt-2 inline-block">View Calendar</a>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    function logout() {
+      window.location.href = "login.html";
+    }
+  </script>
+
+</body>
+</html>
